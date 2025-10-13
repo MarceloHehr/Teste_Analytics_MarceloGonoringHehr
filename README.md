@@ -35,6 +35,8 @@ Os scripts Python dependem das seguintes bibliotecas:
 
 •matplotlib
 
+•seaborn
+
 •Todas podem ser instaladas via pip conforme o passo 3 acima.
 
 
