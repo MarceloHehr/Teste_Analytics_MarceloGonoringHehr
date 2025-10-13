@@ -65,6 +65,13 @@ def geração_de_dados_das_vendas(num_minimo_vendas, id_inicial):
              }
         )
         df = pd.DataFrame(data)
+        # A porcentagem de dados que será transformada em NaN (5%)
+        fracao_nan = 0.05
+        # Introduzir alguns valores faltantes para simular dados "sujos"
+        for col in ['Quantidade', 'Preco']:
+          indices_nan = df.sample(frac=fracao_nan).index
+          df.loc[indices_nan, col] = np.nan
+
         
         return df
 
@@ -144,4 +151,5 @@ if __name__ == "__main__":
 
 
      
+
 
